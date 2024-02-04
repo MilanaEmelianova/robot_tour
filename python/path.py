@@ -3,6 +3,14 @@ import csv
 from collections import deque, OrderedDict
 from pymaze import maze
 
+# TODO
+'''
+def get_csv(*args):
+the function will take 8 coordinates of the obstacles
+format: 2 1 S (or maybe even 2 S - where 2 is 2th cell in the csv file)
+the function puts 0 in a cell (2, 1) "S" AND in a cell (3, 1) "N"
+'''
+
 
 with open('createmaze.csv', 'w', newline='') as file:
     writer = csv.writer(file)
