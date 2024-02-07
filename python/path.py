@@ -73,8 +73,8 @@ def BFS(m, x1, y1, x2, y2):
 if __name__=='__main__':
     m=maze(4,4)
     m.CreateMaze(loadMaze="createmaze.csv")
-    path=BFS(m, 4, 1, 1, 2)
+    path=BFS(m, 3, 1, 1, 2)
     print('Length of Shortest Path',len(path))
-    print(path)
+    print((((((((((path))))))))))
     m.run()
     
