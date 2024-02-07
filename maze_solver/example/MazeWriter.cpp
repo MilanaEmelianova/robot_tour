@@ -5,7 +5,17 @@ using namespace std;
 int main() {
 	ofstream MyMaze("test_cases/maze.txt");
 
-	MyMaze << "hello maze";
+	MyMaze << 
+"+---+---+---+---+" "\n"
+"|               |" "\n"
+"+   +---+   +---+" "\n"
+"|   |           |" "\n"
+"+   +   +---+---+" "\n"
+"|               |" "\n"
+"+   +---+   +---+" "\n"
+"|               |" "\n"
+"+---+---+---+---+"
+;
 
 	MyMaze.close();
 }

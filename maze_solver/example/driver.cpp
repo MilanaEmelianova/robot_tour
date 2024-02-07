@@ -143,17 +143,8 @@ int main()
 			mp.setMaze(maze, msb.getText());
 			switch (option)
 			{
-			case '1':
-				findPath<DepthFirstSearch>(maze, maze.maze_begin(), maze.maze_end(), mp);
-				break;
 			case '2':
 				findPath<BreadthFirstSearch>(maze, maze.maze_begin(), maze.maze_end(), mp);
-				break;
-			case '3':
-				findPath<Dijkstra>(maze, maze.maze_begin(), maze.maze_end(), mp);
-				break;
-			case '4':
-				findPath<Astar>(maze, maze.maze_begin(), maze.maze_end(), mp);
 				break;
 			}
 			cout << '\n';
