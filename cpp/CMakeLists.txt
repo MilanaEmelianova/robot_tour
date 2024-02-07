@@ -1,5 +1,6 @@
-project(robot_tour)
+
 cmake_minimum_required(VERSION 3.28)
+project(robot_tour)
 
 add_subdirectory(modules/pybind11)
 
