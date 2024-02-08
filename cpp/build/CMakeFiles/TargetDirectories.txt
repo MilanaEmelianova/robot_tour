@@ -1,5 +1,0 @@
-/Users/milanaemelyanova/robot_tour/cpp/build/CMakeFiles/path_search.dir
-/Users/milanaemelyanova/robot_tour/cpp/build/CMakeFiles/edit_cache.dir
-/Users/milanaemelyanova/robot_tour/cpp/build/CMakeFiles/rebuild_cache.dir
-/Users/milanaemelyanova/robot_tour/cpp/build/modules/pybind11/CMakeFiles/edit_cache.dir
-/Users/milanaemelyanova/robot_tour/cpp/build/modules/pybind11/CMakeFiles/rebuild_cache.dir
