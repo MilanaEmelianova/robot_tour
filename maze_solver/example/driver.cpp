@@ -4,29 +4,16 @@
 
 void setOuter(MazeStringReader &msb)
 {
-	char buffer = '\0';
-	cout << "Do you want to use the default start and end positions[y/n]: ";
-	cin >> buffer;
-	while (cin.get() != '\n')
-		; // clean line*/
-	if (buffer == 'y' || buffer == 'Y')
-	{
-		cout << "Using default start and end positions\n";
-		msb.setUsingDefault(true);
-		return;
-	}
 	cout << "Maze size [y x]: [" << msb.getRow() << ' ' << msb.getColumn() << "]\n";
 	msb.setUsingDefault(false);
 
-	buffer = '\0';
+	char buffer = '\0';
 
 	int y, x;
 
 	// Set Start
 	do
 	{
-		if (buffer != '\0')
-			cout << "Start position exceeded maze bounds!\n";
 		cout << "Enter Position of start [y x]: ";
 		cin >> buffer >> y >> x >> buffer;
 		while (cin.get() != '\n')
@@ -37,8 +24,6 @@ void setOuter(MazeStringReader &msb)
 	// Set Goal
 	do
 	{
-		if (buffer != '\0')
-			cout << "End position exceeded maze bounds!\n";
 		cout << "Enter Position of goal [y x]: ";
 		cin >> buffer >> y >> x >> buffer;
 		while (cin.get() != '\n')
@@ -62,7 +47,6 @@ void findPath(Maze &maze, Vertex *start, Vertex *end, MazePrint &mp)
 	}
 
 	char option;
-	cout << "Number of iterations: " << p.getCount() << '\n';
 
 	cout << "Cordinates of path: ";
 	list<Coordinates> cord = p.getCordinatePath();
@@ -121,32 +105,12 @@ int main()
 
 			break;
 		case '2': // Find Path
-			if (maze.empty())
-			{
-				cout << "Maze not set!\n";
-				break;
-			}
-			cout << "\n1)dfs\n2)bfs\n3)dijkstra\n4)A *\n";
-			do
-			{
-				// read option
-				option = '\0';
-				if (option != '\0')
-					cout << "Invalid option!\n";
-				cout << "Enter option: ";
-				cin >> option;
-				while (cin.get() != '\n')
-					; // clean line*/
-			} while (!('0' < option && option <= '4'));
 
 			maze.reset();
 			mp.setMaze(maze, msb.getText());
-			switch (option)
-			{
-			case '2':
-				findPath<BreadthFirstSearch>(maze, maze.maze_begin(), maze.maze_end(), mp);
-				break;
-			}
+			
+			findPath<BreadthFirstSearch>(maze, maze.maze_begin(), maze.maze_end(), mp);
+			
 			cout << '\n';
 			break;
 
