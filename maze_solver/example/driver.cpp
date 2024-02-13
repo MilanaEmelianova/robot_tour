@@ -1,6 +1,20 @@
 #include "../src/MazeSolver.h"
 #include "MazeStringReader.h"
 #include "MazePrint.h"
+#include "MazeWriter.h"
+#include <string.h>
+
+// void mazeWriter(MazeWriter &mw)
+// {
+// 	do
+// 	{
+// 		string file_name;
+// 		cout << "Enter the file name:";
+// 		cin >>  file_name;
+// 		while (cin.get() != '\n');
+
+// 	}
+// }
 
 void setOuter(MazeStringReader &msb)
 {

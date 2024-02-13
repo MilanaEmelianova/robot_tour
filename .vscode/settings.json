@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "/workspaces/robot_tour/cpp"
+    "cmake.sourceDirectory": "/workspaces/robot_tour/cpp",
+    "files.associations": {
+        "iosfwd": "cpp"
+    }
 }

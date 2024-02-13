@@ -10,6 +10,7 @@ using std::cin;
 using std::ifstream;
 using std::string;
 using std::vector;
+using namespace std;
 
 class MazeStringReader : public IMazeReader
 {
@@ -46,6 +47,15 @@ public:
 		y_max = ((maze_txt.size() - 1) / 2) - 1;
 		x_max = ((maze_txt[0].size() - 1) / 4) - 1;
 		return true;
+	}
+
+	void writeFile(string filename, vector<string> &vect)
+	{
+		ofstream MyMaze(filename);
+		// https://stackoverflow.com/questions/17938166/displaying-a-vector-of-strings-in-c
+		// pass multiple strings to MyMaze
+		MyMaze << 'bbb';
+		MyMaze.close();
 	}
 
 	/*
