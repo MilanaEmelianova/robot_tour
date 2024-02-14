@@ -49,12 +49,12 @@ public:
 		return true;
 	}
 
-	void writeFile(string filename, vector<string> &vect)
+	void writeFile(string filename, string maze)
 	{
 		ofstream MyMaze(filename);
 		// https://stackoverflow.com/questions/17938166/displaying-a-vector-of-strings-in-c
 		// pass multiple strings to MyMaze
-		MyMaze << 'bbb';
+		MyMaze << maze;
 		MyMaze.close();
 	}
 

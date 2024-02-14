@@ -77,7 +77,18 @@ int main()
 	Maze maze;
 	MazeStringReader msb;
 	MazePrint mp;
-	string in;
+	string file = "test_cases/maze2.txt";
+	string maze = 
+	"+---+---+---+---+" "\n"
+	"|               |" "\n"
+	"+   +       +---+" "\n"
+	"|   |       |   |" "\n"
+	"+   +---+   +   +" "\n"
+	"|               |" "\n"
+	"+   +---+   +---+" "\n"
+	"|       |       |" "\n"
+	"+---+---+---+---+"
+	;
 
 	while (rerun)
 	{
@@ -100,12 +111,9 @@ int main()
 		{
 
 		case '1': // Load Maze
-			cout << "Enter file name: ";
-			cin >> in;
-			while (cin.get() != '\n')
-				; // clean line
-			if (!msb.getFile(in))
-				break;
+
+			cout << file;
+			msb.getFile(file);
 
 			setOuter(msb);
 			maze.setMaze(msb);
