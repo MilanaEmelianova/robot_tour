@@ -11,28 +11,7 @@ using std::ifstream;
 using std::string;
 using std::vector;
 
-/*
-	Maze String Reader
 
-	Rules
-	Top and bottom characters are - if wall is present
-	Left and Right characters are | if wall is present
-
-	If open spaces are found leading to outside the maze like at row 0 column 0
-		If usingdefault is true -> in isVertex goal is set to true
-		else treated as if wall closing path to outside the maze is present
-
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-									|           |               |
-+   +---+---+---+---+---+---+   +   +   +---+---+   +---+   +---+
-|   |                           |                   |           |
-+   +   +---+---+   +---+   +---+---+   +---+---+---+   +---+---+
-|   |           |               |           |                   |
-+   +---+---+---+   +---+---+   +---+---+---+---+---+   +---+---+
-|                   |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-
-*/
 
 class MazeStringReader : public IMazeReader
 {
